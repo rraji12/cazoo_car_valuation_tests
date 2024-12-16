@@ -1,9 +1,7 @@
 package co.uk.cz.model;
 
 import com.opencsv.bean.CsvBindByName;
-import lombok.Getter;
 
-@Getter
 public class CarDetails {
 
     @CsvBindByName(column = "REGISTRATION")
@@ -14,6 +12,18 @@ public class CarDetails {
 
     @CsvBindByName(column = "MODEL")
     private String model;
+
+    public String getRegistration() {
+        return registration;
+    }
+
+    public String getMake() {
+        return make;
+    }
+
+    public String getModel() {
+        return model;
+    }
 
     @Override
     public String toString() {
